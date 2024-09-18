@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(145, 145, 255);
+}
+
+.cabecalho{
+    background-color: #ff00f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container-botao{
+    display: none;
+}
+
+.cabecalho-menu_hamburg{     
+    width: 24px;
+     height: 24px;
+     background-image: url(img/menu.svg);
+     background-repeat: no-repeat;
+     background-position: center;
+     display: inline-block;
+ }
+
+.container-img{
+    padding: 1em;
+}
+
+.container_titulo {
+    display: flex;/*REVER POR QUE FUI EU QUEM PUS*/
+    color: greenyellow;
+    padding-left: 1em;
+}
+
+.caixinha:checked~.container_rotulo>.cabecalho-menu_hamburg {
+    /*esconde e mostra o menu*/
+    background-image: url("img/menuAberto.png");
+    }
+    
+    .caixinha:checked~.container_rotulo { /*o fundo do botao fica na cor escolhida*/
+    background: pink;
+}
+
+.container-botao:checked~.lista-menu {
+    display: block; /* mostra a lista bloqueada pq se nao por isso ela some */
+}
+
+.list-m{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 25vw; /*largura do menu */
+    background-color:  rgb(117, 175, 30);
+    list-style-type: none;
+}
+
+.lista-menu_link { /*tam e cor da fonte dos itens de modo geral*/
+    font-size: 22px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.lista-menu_link:hover { /*tam e cor da fonte altera ao passar o mouse*/
+    font-size: 50px;
+    color: purple;
+}

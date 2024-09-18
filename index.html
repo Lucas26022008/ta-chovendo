@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hamburger</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset e estilos gerais */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+            background-color: rgb(145, 145, 255);
+        }
+
+        .cabecalho {
+            background-color: #ff00f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 10px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .container-botao {
+            display: none;
+        }
+
+        .cabecalho-menu_hamburg {
+            width: 24px;
+            height: 24px;
+            background-image: url(img/menu.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .container-img {
+            padding: 1em;
+        }
+
+        .container_titulo {
+            color: greenyellow;
+            padding-left: 1em;
+        }
+
+        .container-botao:checked ~ .container_rotulo > .cabecalho-menu_hamburg {
+            background-image: url("img/menuAberto.png");
+        }
+
+        .container-botao:checked ~ .container_rotulo {
+            background: pink;
+        }
+
+        .container-botao:checked ~ .list-m {
+            display: block;
+        }
+
+        .list-m {
+            display: none;
+            position: absolute;
+            top: 100%;
+            width: 25vw; /* largura do menu */
+            background-color: rgb(117, 175, 30);
+            list-style-type: none;
+            padding: 0; /* remove padding da lista */
+            margin: 0; /* remove margin da lista */
+        }
+
+        .lista-menu_item {
+            padding: 10px; /* Adiciona espaço entre os itens do menu */
+        }
+
+        .lista-menu_item a {
+            text-decoration: none; /* Remove underline dos links */
+            color: black; /* Cor dos links */
+        }
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <input type="checkbox" id="caixinha" class="container-botao">
+            <label for="caixinha" class="container_rotulo">
+                <span class="cabecalho-menu_hamburg container-img"></span>
+            </label>
+            <h1 class="container_titulo">Religiões</h1>
+            <ul class="list-m">
+                <li class="lista-menu_titulo"></li>
+                <li class="lista-menu_item">
+                    <a href="" class="lista-menu_link">Candomblé</a>
+                </li>
+                <li class="lista-menu_item">
+                    <a href="" class="lista-menu_link">Hinduísmo</a>
+                </li>
+                <li class="lista-menu_item">
+                    <a href="" class="lista-menu_link">Islamismo</a>
+                </li>
+                <li class="lista-menu_item">
+                    <a href="" class="lista-menu_link">Judaísmo</a>
+                </li>
+                <li class="lista-menu_item">
+                    <a href="" class="lista-menu_link">Cristianismo</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+</body>
+</html>
